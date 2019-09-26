@@ -1,0 +1,23 @@
+---
+layout: page
+title: '알고리즘 문제 풀이'
+---
+
+{%- assign posts = site.Practice | sort | reverse -%}
+
+<div id="full-tags-list">
+    <h2 class="linked-section">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        &nbsp;Practice&nbsp;({{site.Practice.size}})
+    </h2>
+    {% for item in posts %}
+    <div class="post-list">
+        <div class="tag-entry">
+            <a href="{{ item.url }}">{{ item.title }}</a>
+            <span class="entry-date">
+                &nbsp;<time datetime="{{- item.date | date_to_xmlschema -}}">{{- item.date | date: "%B %d, %Y" -}}</time>
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,23 @@
+---
+layout: page
+title: '메모장'
+---
+
+{%- assign posts = site.Memo | sort | reverse -%}
+
+<div id="full-tags-list">
+    <h2 class="linked-section">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        &nbsp;Memo&nbsp;({{site.Memo.size}})
+    </h2>
+    {% for item in posts %}
+    <div class="post-list">
+        <div class="tag-entry">
+            <a href="{{ item.url }}">{{ item.title }}</a>
+            <span class="entry-date">
+                &nbsp;<time datetime="{{- item.date | date_to_xmlschema -}}">{{- item.date | date: "%B %d, %Y" -}}</time>
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</div>

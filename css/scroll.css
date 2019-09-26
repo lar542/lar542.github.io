@@ -1,0 +1,21 @@
+#remocon {
+    right: 7px;
+    bottom: 7px;
+    position: fixed;
+}
+
+#remocon .btn {
+    float: right;
+    font-size: 2em;
+    padding: 3px 6px;
+    margin: 2px 0;
+    color: #fff;
+    border-radius: 3px;
+    background: #08c;
+    opacity: .4;
+}
+
+#remocon .btn:hover{
+    opacity:.6;
+    color:#ff0
+}
